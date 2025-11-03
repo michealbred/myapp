@@ -30,12 +30,17 @@
     }
   },
   "include": [
-    "**/*.ts",
-    "**/*.tsx",
+    "src/**/*.ts",
+    "src/**/*.tsx",
     "next-env.d.ts",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "next.config.js",
+    "tailwind.config.ts",
+    "tailwind.config.js"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "payload.config.ts",
+    "src/payload/**/*"
   ]
 }
