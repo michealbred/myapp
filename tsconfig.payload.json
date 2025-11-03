@@ -1,0 +1,20 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "NodeNext",
+    "moduleResolution": "node16",
+    "target": "ES2022",
+    "jsx": "react-jsx",
+    "noEmit": true,
+    "allowJs": false,
+    "types": ["node"],
+    "skipLibCheck": true
+  },
+  "include": [
+    "payload.config.ts",
+    "payload-env.d.ts",
+    "src/payload/**/*.ts",
+    "src/payload/**/*.tsx"
+  ],
+  "exclude": []
+}
