@@ -1,0 +1,200 @@
+﻿import Image from "next/image";
+import Link from "next/link";
+import TestimonialsCarousel from "../components/TestimonialsCarousel";
+import SocialMediaLinks from "../components/SocialMediaLinks";
+import PoweredByAI from "../components/PoweredByAI";
+import TradingInsights from "../components/TradingInsights";
+import RiskDisclaimer from "../components/RiskDisclaimer";
+import Footer from "../components/Footer";
+import TradingProfiles from "../components/TradingProfiles";
+import TechnicalAnalysisPeriodicTable from "../components/TechnicalAnalysisPeriodicTable";
+import CombinedFlashSaleBanner from "../components/CombinedFlashSaleBanner";
+import TrendingNewsTicker from "../components/TrendingNewsTicker";
+import TradersPoolLogo from "../components/TradersPoolLogo";
+
+export const metadata = {
+  title: 'TRADERSPOOL - The Pioneering AI-Engineered Collaborative Trading Hub',
+  description: 'Dive into the ultimate AI-powered hub—connect with pro traders in a buzzing community, unlock elite signals and bots, and dominate markets with our cutting-edge multi-agent tech.',
+};
+
+export default function Home() {
+  const cmeData = [
+    {
+      id: 'cme-combined',
+      category: 'CME Settlement',
+      categoryColor: 'bg-gradient-to-r from-blue-600/90 via-purple-600/90 to-green-600/90',
+      title: 'CME Settlement Price -23 August 2025',
+      tokens: '📊',
+      entities: '🏛️',
+      timeAgo: '23 August',
+      updates: 112285,
+      description: 'BTC CME Settlement- 112285 • ETH CME Settlement- 4228 • E-Mini S&P-500 - 6388 • E-Mini NASDAQ- 23569',
+      image: 'https://cdn.builder.io/api/v1/image/assets%2Fbe7ccd0aed644e439d940e23111adc4c%2F12a76b2cf8ef4bccba388f7d2c59b98d?format=webp&width=800'
+    },
+    {
+      id: 'nvda-earnings',
+      category: 'Earnings Call',
+      categoryColor: 'bg-gradient-to-r from-green-600/90 via-emerald-600/90 to-teal-600/90',
+      title: 'August 27 : NVDA - Earnings Call',
+      tokens: '📈',
+      entities: '💼',
+      timeAgo: 'August 27',
+      updates: 1,
+      description: 'August 27, 2025: NVIDIA (NVDA) Earnings Call 1. NVIDIA\'s Second Quarter Fiscal Year 2026 Earnings Call: Date: Wednesday, August 27, 2025 Time: 2 p.m. Pacific Time (PT) / 5 p.m. Eastern Time (ET)',
+      image: 'https://cdn.builder.io/api/v1/image/assets%2Fbe7ccd0aed644e439d940e23111adc4c%2F03e11d6232a044d8889c7f21f2ad92b8?format=webp&width=800'
+    },
+    {
+      id: 'us-iran-nuclear',
+      category: 'Nuclear Deal',
+      categoryColor: 'bg-gradient-to-r from-red-600/90 via-orange-600/90 to-yellow-600/90',
+      title: 'August 29 : US - Iran Nuclear Deal Deadline (JCPOA)',
+      tokens: '⚛️',
+      entities: '🏛️',
+      timeAgo: 'August 29',
+      updates: 1,
+      description: 'While August 29 is not a formal deadline for the original Joint Comprehensive Plan of Action (JCPOA), it is a key date in the current nuclear standoff.',
+      image: 'https://cdn.builder.io/api/v1/image/assets%2Fbe7ccd0aed644e439d940e23111adc4c%2F13cfa885238f40829d09f8a922815885?format=webp&width=800'
+    }
+  ];
+
+  const whaleActivityData = [
+    {
+      id: 'xrp-etf',
+      category: 'ETF Progress',
+      categoryColor: 'bg-gradient-to-r from-blue-600/90 via-cyan-600/90 to-teal-600/90',
+      title: 'XRP ETF Progress',
+      tokens: '📈',
+      entities: '🏢',
+      timeAgo: 'Recent',
+      updates: 1,
+      description: 'Asset managers like Grayscale and Bitwise submitted amended S-1 forms for spot XRP ETFs, signaling SEC feedback response. XRP price rose 7% amid optimism, though approvals pending.',
+      image: 'https://cdn.builder.io/api/v1/image/assets%2Fbe7ccd0aed644e439d940e23111adc4c%2F03f2febf6e1a4f36ac06921f6871a392?format=webp&width=800'
+    },
+    {
+      id: 'trump-tariffs',
+      category: 'Mining Impact',
+      categoryColor: 'bg-gradient-to-r from-orange-600/90 via-red-600/90 to-yellow-600/90',
+      title: 'Trump Tariffs Impact Bitcoin Miners',
+      tokens: '⚡',
+      entities: '🏭',
+      timeAgo: 'Recent',
+      updates: 1,
+      description: 'New U.S. tariffs on ASIC imports from Southeast Asia reach 21.6%, slowing domestic Bitcoin mining growth. Miners eye overseas expansion like Canada, while used equipment prices may rise amid higher costs.',
+      image: 'https://cdn.builder.io/api/v1/image/assets%2Fbe7ccd0aed644e439d940e23111adc4c%2F29190b18a3b348dab231223ec5da00a5?format=webp&width=800'
+    },
+    {
+      id: 'sui-robinhood',
+      category: 'Exchange Listing',
+      categoryColor: 'bg-gradient-to-r from-purple-600/90 via-blue-600/90 to-indigo-600/90',
+      title: 'Sui Expands via Robinhood',
+      tokens: '🚀',
+      entities: '📱',
+      timeAgo: 'Recent',
+      updates: 1,
+      description: 'Sui token debuts on Robinhood for U.S. traders, enhancing accessibility. Ecosystem hits $2B TVL, $750M stablecoins, $14B DEX volume. Grayscale unveils trusts; ETF proposals reviewed, driving growth and adoption.',
+      image: 'https://cdn.builder.io/api/v1/image/assets%2Fbe7ccd0aed644e439d940e23111adc4c%2F16d5eb0166054bc3bd7c3940c130d1ef?format=webp&width=800'
+    },
+    {
+      id: 'okb-surge',
+      category: 'Token Surge',
+      categoryColor: 'bg-gradient-to-r from-green-600/90 via-emerald-600/90 to-lime-600/90',
+      title: 'OKB Surges 81% Weekly',
+      tokens: '📊',
+      entities: '💎',
+      timeAgo: 'This Week',
+      updates: 1,
+      description: 'OKB token skyrockets 81% in a week, driven by OKX exchange growth, token burns reducing supply, and OKB Chain expansion for DeFi and Web3, amid rising exchange token demand.',
+      image: 'https://cdn.builder.io/api/v1/image/assets%2Fbe7ccd0aed644e439d940e23111adc4c%2Ffa0679bc370a47d1b962acf2e5b1f791?format=webp&width=800'
+    }
+  ];
+
+  return (
+    <main className="min-h-screen text-white dark:text-neutral-100 relative transition-colors duration-300">
+      <section className="relative overflow-hidden py-6 mobile:py-8 tablet:py-10 lg:py-12">
+        <div className="mx-auto max-w-7xl px-4 mobile:px-6">
+          {/* Title Section - Centered */}
+          <div className="text-center mb-6 mobile:mb-8">
+            <h1 className="text-2xl mobile:text-3xl tablet:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight leading-tight transition-colors duration-300">
+              <TradersPoolLogo size="large" href="" />
+              <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent animate-pulse">
+                : Revolutionize Your Trading Game!
+              </span>
+            </h1>
+            <p className="mt-3 mobile:mt-4 text-base mobile:text-lg text-neutral-300 max-w-full mobile:max-w-3xl mx-auto dark:text-neutral-200 transition-colors duration-300 px-2">
+              Dive into the ultimate AI-powered hub—connect with pro traders in a buzzing community, unlock elite signals and bots, and dominate markets with our cutting-edge multi-agent tech. Seamless, smart, unstoppable.
+            </p>
+            <p className="mt-2">
+              <a href="/auth/login?screen_hint=signup" className="text-blue-500 hover:underline">Sign up</a> | 
+              <a href="/auth/login" className="text-blue-500 hover:underline">Log in</a> | 
+              <a href="/profile" className="text-blue-500 hover:underline">Profile</a>
+            </p>
+          </div>
+
+          {/* Trending News Ticker */}
+          <TrendingNewsTicker />
+
+          {/* Combined Flash Sale Banner */}
+          <CombinedFlashSaleBanner />
+
+          {/* Responsive Layout */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mobile:gap-8 items-start mb-6">
+            {/* Left Column - Login and Connect */}
+            <div className="space-y-3 order-2 lg:order-1">
+              <div className="text-center lg:text-left">
+                <p className="text-xs mobile:text-sm text-blue-600 font-medium dark:text-blue-400 transition-colors duration-300 mb-2 mt-3 px-2 lg:px-0">
+                  Money generated through products sold on our website will be used in the development of AI and AI-related products
+                </p>
+
+                {/* Powered by AI Section */}
+                <div className="flex justify-center lg:justify-start mt-2">
+                  <PoweredByAI />
+                </div>
+
+                {/* Trading Insights Section */}
+                <div className="mt-4">
+                  <TradingInsights />
+                </div>
+
+                {/* Trading Insights Section - CME Settlement */}
+                <div className="mt-4">
+                  <TradingInsights title="CME and U.S Data" customData={cmeData} />
+                </div>
+
+                {/* Trading Insights Section - News That Matters */}
+                <div className="mt-4">
+                  <TradingInsights title="News That Matters" customData={whaleActivityData} />
+                </div>
+
+              </div>
+            </div>
+
+            {/* Right Column - Trading Analytics */}
+            <div className="order-1 lg:order-2 lg:pl-4">
+              <TradingProfiles />
+
+              {/* Technical Analysis Periodic Table - Below Advanced Technical Analysis */}
+              <TechnicalAnalysisPeriodicTable />
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      {/* Testimonials Section */}
+      <TestimonialsCarousel />
+
+      <Footer />
+
+      {/* Product Names and Brands Disclaimer */}
+      <div className="border-t border-neutral-900/50 bg-[#0b0b0e]/80 backdrop-blur py-4">
+        <div className="mx-auto max-w-7xl px-4 mobile:px-6">
+          <p className="text-center text-neutral-400 dark:text-neutral-300 text-xs leading-relaxed">
+            The product names, logos and brands used on this website are for identification purposes only. Registered names and trademarks are the copyright and property of their respective owners.
+          </p>
+        </div>
+      </div>
+
+    </main>
+  );
+}

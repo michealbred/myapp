@@ -1,0 +1,14 @@
+export type BlogLink = { name: string; href: string; image?: string; imageAlt?: string };
+
+export const blogLinks: BlogLink[] = [
+  { name: "BTC CME — Monday Playbook", href: "/blog/btc-cme-monday-playbook", image: "https://cdn.builder.io/api/v1/image/assets%2F75da4fd91a5e42b99780e230ac3e5130%2F5682121579f2446695b6aa261906d589?format=webp&width=800", imageAlt: "BTC CME Monday playbook chart" },
+  { name: "BTC Daily Analysis 29-August-25", href: "/blog/btc-daily-analysis-29-august-25", image: "https://cdn.builder.io/api/v1/image/assets%2F75da4fd91a5e42b99780e230ac3e5130%2F7917b463eee64132b888a11c060f0ff7?format=webp&width=1000", imageAlt: "BTC value areas with downside targets" },
+  { name: "BTC Daily Analysis 28-August-25", href: "/blog/btc-daily-analysis-28-august-25", image: "https://cdn.builder.io/api/v1/image/assets%2F75da4fd91a5e42b99780e230ac3e5130%2F09a6bf3bf50743e7b44fc7d43de50b8b?format=webp&width=900", imageAlt: "BTC value area balance and breakdown zone" },
+  { name: "BTC Daily Analysis 27-August-25", href: "/blog/btc-daily-analysis-27-august-25", image: "https://cdn.builder.io/api/v1/image/assets%2Feeaaa092ccbd42afa859df4281251554%2F18d9875c5385455eba368d8313cccaa2?format=webp&width=800", imageAlt: "BTC value area balance and breakdown" },
+  { name: "BTC Daily Analysis 26-August-25", href: "/blog/btc-daily-analysis-26-august-25", image: "https://cdn.builder.io/api/v1/image/assets%2Feeaaa092ccbd42afa859df4281251554%2F7b61d76e65f1441a8d3c05379e15c65e?format=webp&width=800", imageAlt: "BTC value area balance and breakdown" },
+  { name: "BTC Daily Analysis 25-August-25", href: "/blog/btc-daily-analysis-25-august-25", image: "https://cdn.builder.io/api/v1/image/assets%2F9e7d1d55e0074c05b262a3fbbb560894%2Fd2b915d163b7443ea26e83bb3a739882", imageAlt: "BTC Weekly Chart Analysis" },
+  { name: "BTC Daily Fibonacci Analysis 25-August-25", href: "/blog/btc-daily-fibonacci-analysis-25-august-25", image: "https://cdn.builder.io/api/v1/image/assets%2F9e7d1d55e0074c05b262a3fbbb560894%2F1e74e1e4a9184e7989e6fc810ea24bcc", imageAlt: "BTC HTF Chart Analysis" },
+  { name: "Machi Brothers Trading Analysis", href: "/blog/machi-brothers-trading-analysis", image: "https://cdn.builder.io/api/v1/image/assets%2F984a425177d14c83a7d5bd1fcd34d098%2Fdeb1f1e431d8484d9a53757395d271c5?format=webp&width=800", imageAlt: "Machi Brothers Trading Analysis" },
+  { name: "James Wynn Market Manipulation", href: "/blog/james-wynn-market-manipulation", image: "https://cdn.builder.io/api/v1/image/assets%2Fbbfeae742d9e408393a892b705a9405a%2F01b7455e5ddd4ca98fec9b4f608465cb?format=webp&width=1200", imageAlt: "James Wynn trading article cover" },
+  { name: "0.618 and Solana", href: "/blog/solana-fibonacci-analysis", image: "https://cdn.builder.io/api/v1/image/assets%2Fbbfeae742d9e408393a892b705a9405a%2F146cbf3bd3fd424eb8433725449252c9?format=webp&width=800", imageAlt: "SOLUSDT 4h chart — golden pocket" }
+];
